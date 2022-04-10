@@ -2,6 +2,8 @@
 
 Color recognizer app which can detect name of image colors using **Python**.
 
+![Color Recognition Python](demo.png)
+
 ### Colors
 
 More then 650 colors are supported and you can see names of colors in [`colors.csv`](colors.csv).
