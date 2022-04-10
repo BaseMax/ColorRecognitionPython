@@ -1,10 +1,24 @@
 # Color Recognition Python
 
+Color recognizer app which can detect name of image colors using **Python**.
+
+### Colors
+
+More then 650 colors are supported and you can see names of colors in [`colors.csv`](colors.csv).
+
 ## Using
 
+Put path of your input image:
+```python
+image_path = 'test1.jpg'
+```
+
+And run:
 ```sh
 python ColorRecognition.py
 ```
+
+Now, You are able to click anywhere you like to know the color name.
 
 ### Source
 
