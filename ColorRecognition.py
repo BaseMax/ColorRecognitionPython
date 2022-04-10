@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 # Global variables
-index = ["color", "color_name", "hex", "R", "G", "B"]
+index = ['color', 'color_name', 'hex', 'R', 'G', 'B']
 csv = pd.read_csv('colors.csv', names=index, header=None)
 
 clicked = False
@@ -12,10 +12,10 @@ r = g = b = xpos = ypos = 0
 def recognize_color(R, G, B):
     minimum = 10000
     for i in range(len(csv)):
-        d = abs(R- int(csv.loc[i,"R"])) + abs(G- int(csv.loc[i,"G"]))+ abs(B- int(csv.loc[i,"B"]))
+        d = abs(R- int(csv.loc[i,'R'])) + abs(G- int(csv.loc[i,'G']))+ abs(B- int(csv.loc[i,'B']))
         if(d<=minimum):
             minimum = d
-            cname = csv.loc[i,"color_name"]
+            cname = csv.loc[i,'color_name']
     return cname
 
 def mouse_click(event, x, y, flags, param):
@@ -33,10 +33,10 @@ def mouse_click(event, x, y, flags, param):
 cv2.namedWindow('Color Recognition')
 cv2.setMouseCallback('Color Recognition', mouse_click)
 
-img = cv2.imread("test2.jpg")
+img = cv2.imread('test2.jpg')
 
 while 1:
-    cv2.imshow("Color Recognition", img)
+    cv2.imshow('Color Recognition', img)
     if clicked:
         cv2.rectangle(img,(20,20), (750,60), (b,g,r), -1)
 
