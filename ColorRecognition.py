@@ -19,7 +19,8 @@ def recognize_color(R, G, B):
     return cname
 
 def mouse_click(event, x, y, flags, param):
-    if event == cv2.EVENT_LBUTTONDBLCLK:
+    # if event == cv2.EVENT_LBUTTONDBLCLK:
+    if event == cv2.EVENT_LBUTTONUP:
         global b, g, r, xpos, ypos, clicked
 
         clicked = True
@@ -36,7 +37,10 @@ def mouse_click(event, x, y, flags, param):
 cv2.namedWindow('Color Recognition')
 cv2.setMouseCallback('Color Recognition', mouse_click)
 
-img = cv2.imread('test2.jpg')
+image_path = 'test1.jpg'
+# image_path = 'test2.jpg'
+
+img = cv2.imread(image_path)
 
 while 1:
     cv2.imshow('Color Recognition', img)
