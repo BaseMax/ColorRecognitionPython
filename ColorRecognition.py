@@ -3,6 +3,9 @@ import numpy as np
 import pandas as pd
 
 # Global variables
+image_path = 'test1.jpg'
+# image_path = 'test2.jpg'
+
 index = ['color', 'color_name', 'hex', 'R', 'G', 'B']
 csv = pd.read_csv('colors.csv', names=index, header=None)
 
@@ -36,9 +39,6 @@ def mouse_click(event, x, y, flags, param):
 # Startup
 cv2.namedWindow('Color Recognition')
 cv2.setMouseCallback('Color Recognition', mouse_click)
-
-image_path = 'test1.jpg'
-# image_path = 'test2.jpg'
 
 img = cv2.imread(image_path)
 
