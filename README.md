@@ -1,6 +1,6 @@
 # Color Recognition Python
 
-Color recognizer app which can detect name of image colors using **Python**.
+Color recognizer app which can detect names of image colors using **Python**.
 
 Click any pixels of the image you want and get the color name, More than 650 colors are supported.
 
